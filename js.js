@@ -1,16 +1,9 @@
-const row1 = document.querySelector(".row1");
-const row2 = document.querySelector(".row2");
-const row3 = document.querySelector(".row3");
-const row4 = document.querySelector(".row4");
-
 const button = document.querySelector((".button"));
 let numSides = 0;
 button.addEventListener("click", (event) => {
    numSides = prompt("How many sides?",4);
    create(numSides);
 });
-
-
 
 function create(num){
 
