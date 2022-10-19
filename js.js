@@ -16,26 +16,23 @@ function create(num){
 
     for(let i=0;i<num;i++){
         let divider = document.createElement("div");
-        div.setAttribute("id","flex");
-        div.setAttribute("class",`row${num}`);
+        divider.setAttribute("id","flex");
+        divider.setAttribute("class",`row${i}`);
+        document.querySelector(".squares").appendChild(divider);
     }
 
     
-    for(let i=0;i<num*4;i++){
-        let div = document.createElement("div");
-        div.setAttribute("class","col");
-        div.addEventListener("mouseover",(event)=>{
-            div.style.backgroundColor = "#00FF00";
-        });
-        if(i<num){
-            document.querySelector(".row1").appendChild(div);
-        }else if(i<num*2){
-            document.querySelector(".row2").appendChild(div);
-        }else if(i<num*3){
-            document.querySelector(".row3").appendChild(div);
-        }else{
-            document.querySelector(".row4").appendChild(div);
+    for(let i=0;i<num;i++){
+        for(let i=0;i<num;i++){
+            let div = document.createElement("div");
+            div.setAttribute("class","col");
+            div.addEventListener("mouseover",(event)=>{
+                div.style.backgroundColor = "#00FF00";
+            });
+            document.querySelector(`.row${i}`).appendChild(div);   
         }
+       
+       
     }
 }
 
