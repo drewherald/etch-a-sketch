@@ -27,7 +27,7 @@ function create(num){
             let div = document.createElement("div");
             div.setAttribute("class","col");
             div.addEventListener("mouseover",(event)=>{
-                div.style.backgroundColor = "#00FF00";
+                div.style.backgroundColor = "black";
             });
             document.querySelector(`.row${i}`).appendChild(div);   
         }
